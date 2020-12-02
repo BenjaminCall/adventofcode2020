@@ -9,27 +9,17 @@ nums = [1939,1585,1712,1600,1370,1447,1247,1446,1323,1713,1277,1946,1677,1428,12
 82,1339,1413,90,1662,1291,1740,1340,1365,2003,1546,1621,1650,1518,1807,1382,1433,1968,1940,1986,1437,1651,1237,1862,1409,1200,
 2002,2009,1735,1487,1706,1643,1505]
 
-
-first = 0
-second = 0
-third = 0
-
 def findDouble(nums, sum):
-  for num in nums:
-    first = num
-    for num in nums:
-      second = num
+  for first in nums:
+    for second in nums:
       if first + second == 2020:
         print(first, second)
         return first*second
 
 def findTriple(nums, sum):
-  for num in nums:
-    first = num
-    for num in nums:
-      second = num
-      for num in nums:
-        third = num
+  for first in nums:
+    for second in nums:
+      for third in nums:
         if first + second + third == 2020:
           print(first, second, third)
           return first*second*third
